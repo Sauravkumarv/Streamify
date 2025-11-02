@@ -36,9 +36,9 @@ export const signUp = async (req, res) => {
       await upsertStreanUser({
         id:newUser._id.toString(),
         name:newUser.fullName,
-        image:newUser.profilePic || ""
+        image:newUser.profilePic || "",
       })
-      console.log(`new streaUser created for ${newUser.fullName}`)
+      console.log(`new streamUser created for ${newUser.fullName}`)
     } catch (error) {
       console.log("Error while creating new stream user",error)
     }

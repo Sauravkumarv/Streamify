@@ -15,18 +15,19 @@ import { axiosInstance } from "./lib/axios";
 const App = () => {
   const {
     data: authData,
-    isLoading,
+    isLoading,  
     error,
   } = useQuery({
-    queryKey: ["todos"],
+    queryKey: ["authUser"],
 
     queryFn: async () => {
       const res = await axiosInstance.get("/auth/me");
-      return res;
+      return res.data;  
     },
     retry: false, //auth check
   });
   const authUser = authData?.user;
+  console.log(authUser,authData)
 
   return (
     <div className="h-screen" data-theme="normal">
