@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { Link } from "react-router";
 import { signup } from "../lib/api";
+import useSignup from "../hooks/useSignup";
 
 const SignUpPage = () => {
   const [signupData, setSignupData] = useState({
@@ -10,16 +11,7 @@ const SignUpPage = () => {
     password: "",
   });
 
-  const QueryClient = useQueryClient();
-
-  const {
-    mutate: signupMutation,
-    isPending,
-    error,
-  } = useMutation({
-    mutationFn: signup,
-    onSuccess: () => QueryClient.invalidateQueries({ queryKey: ["authUser"] }),
-  });
+  const {isPending,error,signupMutation}=useSignup();
 
   const handleSignup = (e) => {
     e.preventDefault();
