@@ -1,4 +1,4 @@
-import React from "react";
+import React, { Children } from "react";
 import HomePage from "./pages/HomePage";
 import SignUpPage from "./pages/SignUpPage";
 import LoginPage from "./pages/LoginPage";
@@ -11,6 +11,7 @@ import toast, { Toaster } from "react-hot-toast";
 import { Routes, Route, Navigate } from "react-router";
 import PageLoader from "./components/PageLoader";
 import useAuthUser from "./hooks/useAuthUser";
+import Layout from "./components/Layout";
 
 const App = () => {
 
@@ -26,7 +27,12 @@ const{isLoading,authUser}=useAuthUser();
       <Routes>
         <Route
           path="/"
-          element={isAuthenticated && isOnboarded ?(<HomePage/>):(
+          element={isAuthenticated && isOnboarded ?(
+<Layout showSidebar={true} >
+  <HomePage />
+  </Layout>
+                 
+          ):(
             <Navigate to={!isAuthenticated?"/login":"/onboarding"}/>
           )       
            }
