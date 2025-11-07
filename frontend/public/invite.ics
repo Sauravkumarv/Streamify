@@ -1,0 +1,47 @@
+BEGIN:VCALENDAR
+PRODID:-//Google Inc//Google Calendar 70.9054//EN
+VERSION:2.0
+CALSCALE:GREGORIAN
+METHOD:REQUEST
+BEGIN:VTIMEZONE
+TZID:Asia/Kolkata
+X-LIC-LOCATION:Asia/Kolkata
+BEGIN:STANDARD
+TZOFFSETFROM:+0530
+TZOFFSETTO:+0530
+TZNAME:GMT+5:30
+DTSTART:19700101T000000
+END:STANDARD
+END:VTIMEZONE
+BEGIN:VEVENT
+DTSTART;TZID=Asia/Kolkata:20251107T160000
+DTEND;TZID=Asia/Kolkata:20251107T170000
+DTSTAMP:20251107T044344Z
+ORGANIZER;CN=Apoorva Seth:mailto:apoorva@hirepool.in
+UID:2uumdarv6hm478eskue6jjn7tg@google.com
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=nivedita.dhoot@primathon.in;X-NUM-GUESTS=0:mailto:nivedita.dhoot@pr
+ imathon.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=ACCEPTED;RSVP=TRUE
+ ;CN=Apoorva Seth;X-NUM-GUESTS=0:mailto:apoorva@hirepool.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=notes@primathon.in;X-NUM-GUESTS=0:mailto:notes@primathon.in
+ATTENDEE;CUTYPE=INDIVIDUAL;ROLE=REQ-PARTICIPANT;PARTSTAT=NEEDS-ACTION;RSVP=
+ TRUE;CN=sauravkumarv22@gmail.com;X-NUM-GUESTS=0:mailto:sauravkumarv22@gmail
+ .com
+X-MICROSOFT-CDO-OWNERAPPTID:-1885830171
+CREATED:20251107T044336Z
+DESCRIPTION:Hi\,\n\nPlease accept the invite if you wish to continue with t
+ he interview/assessment round.\nNo show without a pre communication in an i
+ nterview/assessment will terminate the candidature. Candidate for interview
+ /assessment\n\nMust ensure:\n\n1. Good Internet Connection\n2. Quiet enviro
+ nment\n3. Constant Power Supply/ Charged Laptop\n4. Working camera and scre
+ en sharing\n\nBEST OF LUCK!!
+LAST-MODIFIED:20251107T044342Z
+LOCATION:
+SEQUENCE:0
+STATUS:CONFIRMED
+SUMMARY:Primathon Technologies II Assessment II Saurav Kumar
+TRANSP:OPAQUE
+END:VEVENT
+END:VCALENDAR
