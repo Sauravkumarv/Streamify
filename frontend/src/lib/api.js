@@ -37,11 +37,11 @@ export const getRecommendedUsers=async()=>{
 const res=await axiosInstance.get("/users");
 return res.data;
 }
-export const getOutgoiningFriendRequs=async()=>{
-const res=await axiosInstance.get("/users/outgoining-friend-request");
-return res.data;
+export const getOutgoingFriendReqs=async()=>{
+const res=await axiosInstance.get("/users/outgoing-friend-requests");
+return res.data;  
 }
 export const sendFriendRequest=async(userId)=>{
-  const res=await axiosInstance.get(`/users/friend-request/${userId}`);
+  const res=await axiosInstance.post(`/users/friend-request/${userId}`);
   return res.data;
   }
