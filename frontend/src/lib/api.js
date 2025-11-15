@@ -46,7 +46,7 @@ export const sendFriendRequest=async(userId)=>{
   return res.data;
   }
   export const getFriendRequest=async()=>{
-    const res=await axiosInstance.get("/users/friend-request");
+    const res=await axiosInstance.get("/users/friend-requests");
     return res.data;
   }
   export const acceptFriendRequest=async(requestId)=>{

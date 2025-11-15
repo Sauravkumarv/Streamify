@@ -73,7 +73,6 @@ export async function sendFriendRequest(req, res) {
       sender: myId,
       recipient: recipientId,
     });
-
     res.status(201).json(friendRequest);
   } catch (error) {
     console.error("Error in sendFriendRequest controller", error.message);
@@ -85,11 +84,16 @@ try {
   const {id:requestId}=req.params;
   const friendRequest=await FriendRequest.findById(requestId);
 
+  // *****************************************
+  console.log(friendRequest)
+    // *****************************************
+
+
   if(!friendRequest)return res.status(404).json({message:"Friend request not found"});
 
   //verify the current user in the recipient
 
-  if(friendRequest.recipients.toString()!== req.user.id){
+  if(friendRequest.recipient.toString()!== req.user.id){
     return res.status(403).json({message:"you are not authorized to accept this request"});
   }
 
@@ -100,10 +104,10 @@ try {
   //$addToSet:adds element to an array only if they do not already exists
 
   await USER.findByIdAndUpdate(friendRequest.sender,{
-    $addToSet:{friends:friendRequest.recipients},
+    $addToSet:{friends:friendRequest.recipient},
   })
 
-  await USER.findByIdAndUpdate(friendRequest.recipients,{
+  await USER.findByIdAndUpdate(friendRequest.recipient,{
     $addToSet:{friends:friendRequest.sender}
   })
   res.status(200).json({message:"Friends Request Accepted"});
@@ -118,7 +122,7 @@ try {
 export async function getFriendRequest(req,res){
   try {
     const incommingRequest=await FriendRequest.find({
-      recipients:req.user.id,
+      recipient:req.user.id,
       status:"pending",
           }).populate("sender","fullName profilePic nativeLanguage learningLanguage");
 
@@ -126,7 +130,6 @@ export async function getFriendRequest(req,res){
             sender:req.user.id,
             status:"accepted",
           }).populate("recipient","fullName profilePic");
-
 
           res.status(200).json({incommingRequest,accceptedReqs})
   } catch (error) {

@@ -31,7 +31,7 @@ const App = () => {
           path="/"
           element={
             isAuthenticated && isOnboarded ? (
-              <Layout showSidebar={true} Children={<HomePage/>}>
+              <Layout showSidebar={true} Children={<HomePage />}>
                 <HomePage />
               </Layout>
             ) : (
@@ -63,9 +63,9 @@ const App = () => {
         <Route
           path="/notification"
           element={
-            isAuthenticated && isOnboarded ?<Layout showSidebar={true}>
-<NotificationPage/>
-            </Layout>: <Navigate to={!isOnboarded?"/login":"/onboarding"} />
+            isAuthenticated && isOnboarded ? <Layout showSidebar={true} Children={<NotificationPage/>}>
+              <NotificationPage />
+            </Layout> : <Navigate to={!isOnboarded ? "/login" : "/onboarding"} />
           }
         />
         <Route
