@@ -21,7 +21,6 @@ import CallButton from "../components/CallButton";
 
 const STREAM_API_KEY = import.meta.env.VITE_STREAM_API_KEY;
 
-
 const ChatPage = () => {
   const { id: targetUserId } = useParams();
 
@@ -57,7 +56,6 @@ const ChatPage = () => {
 
         //
         const channelId = [authUser._id, targetUserId].sort().join("-");
-        
 
         // you and me
         // if i start the chat => channelId: [myId, yourId]
@@ -77,16 +75,14 @@ const ChatPage = () => {
       } finally {
         setLoading(false);
       }
-    };
+    };  
 
-    initChat();
+    initChat( );
   }, [tokenData, authUser, targetUserId]);
-
 
   const handleVideoCall = () => {
     if (channel) {
       const callUrl = `${window.location.origin}/call/${channel.id}`;
-
 
       channel.sendMessage({
         text: `I've started a video call. Join me here: ${callUrl}`,
