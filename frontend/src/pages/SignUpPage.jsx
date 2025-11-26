@@ -1,7 +1,6 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { Link } from "react-router";
-import { signup } from "../lib/api";
 import useSignup from "../hooks/useSignup";
 
 const SignUpPage = () => {
