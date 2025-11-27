@@ -16,23 +16,13 @@ const{logoutMutation,isLoading,error}=useLogout();
     <nav className='bg-base-200 border-b border-base-300 sticky top-0 z-30 h-16 flex items-center'>
       <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
         <div className='flex items-center justify-end w-full'>
-          {/* logo only in the chat page */}
-
-          {/* {isChatPage && (
-            <div className='pl-5'>
-              <Link to="/" className='flex items-center gap-2.5'>
-                <ShipWheelIcon className='size-9 text-primary'/>
-                <span className='text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider'>Streamify</span>
-              </Link>
-
-            </div>
-          )} */}
+          
           
           {/* Logo - Hidden on large screens unless on chat page, always visible on mobile */}
           <div className={`${isChatPage ? 'block' : 'block lg:hidden'}`}>
-            <Link to="/" className='flex items-center gap-2.5 hover:opacity-80 transition-opacity'>
-              <ShipWheelIcon className='size-8 sm:size-9 text-primary' aria-hidden="true" />
-              <span className='text-2xl sm:text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider'>
+            <Link to="/" className='flex items-center gap-2 sm:gap-2.5 hover:opacity-80 transition-opacity'>
+              <ShipWheelIcon className='size-6 sm:size-9 text-primary' aria-hidden="true" />
+              <span className='text-xl sm:text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider'>
                 Streamify
               </span>
             </Link>
