@@ -2,6 +2,7 @@ import { useMutation, useQueryClient } from "@tanstack/react-query";
 import React, { useState } from "react";
 import { Link } from "react-router";
 import useSignup from "../hooks/useSignup";
+import { HandshakeIcon } from "lucide-react";
 
 const SignUpPage = () => {
   const [signupData, setSignupData] = useState({
@@ -33,12 +34,12 @@ const SignUpPage = () => {
               strokeLinecap="round"
               strokeLinejoin="round"
             >
-              <circle cx="12" cy="12" r="10" />
+              <HandshakeIcon cx="12" cy="12" r="10" />
               <path d="M12 2v20M2 12h20" />
               <path d="m8 8 8 8M16 8l-8 8" />
             </svg>
             <span className="text-2xl font-bold text-emerald-500 tracking-wider">
-              Streamify
+              Frenzy
             </span>
           </div>
 
@@ -59,7 +60,7 @@ const SignUpPage = () => {
                   Create an Account
                 </h2>
                 <p className="text-sm text-gray-400 mt-1">
-                  Join Streamify and start your language learning adventure!
+                  Join Frenzy and start your language learning adventure!
                 </p>
               </div>
 

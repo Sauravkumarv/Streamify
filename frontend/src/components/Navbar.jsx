@@ -1,7 +1,7 @@
 import React from 'react'
 import useAuthUser from '../hooks/useAuthUser'
 import { Link, useLocation } from 'react-router';
-import { BellIcon, LogOutIcon, ShipWheelIcon } from 'lucide-react';
+import { BellIcon, HandshakeIcon, LogOutIcon } from 'lucide-react';
 import ThemeSelector from './ThemeSelector';
 import useLogout from '../hooks/useLogout';
 
@@ -21,9 +21,9 @@ const{logoutMutation,isLoading,error}=useLogout();
           {/* Logo - Hidden on large screens unless on chat page, always visible on mobile */}
           <div className={`${isChatPage ? 'block' : 'block lg:hidden'}`}>
             <Link to="/" className='flex items-center gap-2 sm:gap-2.5 hover:opacity-80 transition-opacity'>
-              <ShipWheelIcon className='size-6 sm:size-9 text-primary' aria-hidden="true" />
+              <HandshakeIcon className='size-6 sm:size-9 text-primary' aria-hidden="true" />
               <span className='text-xl sm:text-3xl font-bold font-mono bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary tracking-wider'>
-                Streamify
+                Frenzy
               </span>
             </Link>
           </div>
