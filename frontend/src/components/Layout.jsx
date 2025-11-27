@@ -1,21 +1,25 @@
 import Sidebar from './Sidebar'
 import Navbar from './Navbar'
 
-const Layout = ({Children,showSidebar=false}) => {
+const Layout = ({ children, showSidebar = false }) => {
   return (
     <div className='min-h-screen'>
       <div className='flex'>
-{showSidebar && <Sidebar/>}
 
-<div className='flex-1 flex-col'>
-<Navbar/>
+        {showSidebar && <Sidebar />}
 
-<main className='flex-1 overflow-y-auto'>{Children}</main>
-</div>
+        {/* Page Right Section */}
+        <div className='flex-1 flex flex-col h-screen'>
+          <Navbar />
+
+          <main className='flex-1 overflow-y-auto p-4'>
+            {children}
+          </main>
+        </div>
+
       </div>
-      
     </div>
   )
 }
 
-export default Layout
+export default Layout;
