@@ -9,7 +9,7 @@ const Layout = ({ children, showSidebar = false }) => {
         {showSidebar && <Sidebar />}
 
         {/* Page Right Section */}
-        <div className='flex-1 flex flex-col h-screen'>
+        <div className='flex-1 flex flex-col h-screen w-screen'>
           <Navbar />
 
           <main className='flex-1 overflow-y-auto p-4'>
