@@ -1,6 +1,6 @@
 # Frenzy
 
-Stramify is a full-stack language exchange platform where learners can discover new study partners, exchange friend requests, chat in real-time, and jump into video calls—all powered by Stream's chat and video APIs. The project ships with an Express/MongoDB backend and a Vite/React frontend styled with Tailwind + DaisyUI.
+Frenzy is a full-stack language exchange platform where learners can discover new study partners, exchange friend requests, chat in real-time, and jump into video calls—all powered by Stream's chat and video APIs. The project ships with an Express/MongoDB backend and a Vite/React frontend styled with Tailwind + DaisyUI.
 
 ## Features
 
